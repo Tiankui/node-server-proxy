@@ -36,7 +36,7 @@ app.configure('production', function(){
 });
 
 //加载路由
-routes.init(app);
+routes(app);
 
 /**
 http.createServer(app).listen(app.get('port'), function(){

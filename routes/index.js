@@ -1,4 +1,4 @@
-var index = require('./main');
-exports.init = function(app){
-	index.init(app);
-}
+var main = require('./main');
+module.exports = function(app){
+	main(app);
+};
