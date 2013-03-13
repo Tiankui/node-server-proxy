@@ -1,0 +1,17 @@
+{
+  "name": "jjjj",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "FE (BP&IT)",
+  "dependencies": {
+    "express": "3.x",
+    "ejs": "*",
+    "cas":"*"
+  },
+  "devDependencies":{
+    "bai": "0.2.0"
+  }
+}
