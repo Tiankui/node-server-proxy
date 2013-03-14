@@ -1,5 +1,5 @@
 {
-  "name": "<%= name %>",
+  "name": "node-server-proxy",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,6 +12,6 @@
     "cas":"*"
   },
   "devDependencies":{
-    "bai": "<%= versions.bai %>"
+    "bai": "0.2.4"
   }
 }
