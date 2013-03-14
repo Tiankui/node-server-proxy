@@ -1,3 +1,3 @@
-module.exports = function(req, res ,next ,option){
+module.exports = function(req, res ){
 		res.render('index', { title: req.data.title });
 };
