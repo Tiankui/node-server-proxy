@@ -1,4 +1,4 @@
-var main = require('./main');
+var main_module = require('./main');
 module.exports = function(app){
-	main(app);
+    main_module(app);
 };
