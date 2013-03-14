@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- dev css:assets -->
+    <!-- base: normalize,color,hf.css -->
+    <link rel="stylesheet" href="static/css/global.less.css" />
+    <link rel="stylesheet" href="static/css/main.less.css" />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <% include ../global_blocks/header %>
+    <% include ../global_blocks/footer %>
+    <!-- dev js:assets -->
+    <script src="lib/js/require.js" data-main="lib/js/main"></script>
+    <!--[if lt Imainmain/main
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
