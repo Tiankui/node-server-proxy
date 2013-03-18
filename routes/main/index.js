@@ -1,7 +1,10 @@
 var login_routes = require('./login/routes');
 var getdata_routes = require('./getdata/routes');
-module.exports = function(app){
-	app.get('/', require('./main')());
-	app.get('/login', login_routes.login);
-	app.get('/getdata', getdata_routes.getData);
-};
+exports.routings = {
+        //首页
+        '/':{method:'get',processFunction:require('./main')()},
+        //登录
+        '/login':{method:'get',processFunction:login_routes.login},
+        //获取数据
+        '/getdata':{method:'get',processFunction:getdata_routes.getData}
+    };
