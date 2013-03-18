@@ -6,13 +6,23 @@
     <!-- 根据是否移动项目选择 -->
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10,user-scalable=no" />
     <meta name="format-detection" content="telephone=no" />
-    <script src="http://172.22.234.59:4000/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io.connect('http://172.22.234.59:4000');
-      socket.emit('my event', 'Hello world.')
-    </script>
+      <script src="/socket.io/socket.io.js"></script>
+
   </head>
   <body>
-    
+  <script>
+      var socket = io.connect();
+      //socket.emit('my event', 'Hello world.')
+      socket.on('connect', function(){
+          alert(1);
+          socket.on('ready', function () {
+              console.log('Connected !');
+              socket.emit('msg', confirm('What is your message?'));
+          });
+          socket.on('sysinfo',function(data){
+              console.log(data);
+          })
+      });
+  </script>
   </body>
 </html>

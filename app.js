@@ -19,12 +19,13 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
-  app.use(express.session({ secret: "123321" }));
+  app.use(express.session({ secret: "thisissecret" }));
   app.use(app.router);
 //  app.use(require('less-middleware')({ src: __dirname + '/public' }));
   app.use('/lib',express.static(__dirname + '/app/lib'));
   app.use('/static',express.static(__dirname + '/app/dist'));
   app.use('/static',express.static(__dirname + '/app/img'));
+  app.use('/test',express.static(__dirname + '/codeLab'));
 });
 
 app.set('env','development');
@@ -42,6 +43,8 @@ routes(app);
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });*/
-app.listen(3000,function(){
+var server = http.createServer(app);
+var  socketService = require('./socket')(server);
+server.listen(3000,function(){
   console.log("Express server listening on port " + app.get('port'));
 });
