@@ -1,8 +1,6 @@
 var main_module = require('./main');
-var sys_module = require('./sysinfo');
 module.exports = function(app){
     getRoutes(app,main_module.routings);
-    getRoutes(app,sys_module.routings);
 };
 
 var getRoutes = function(app,routings){
