@@ -6,7 +6,9 @@
     <!-- base: normalize,color,hf.css -->
     <link rel="stylesheet" href="static/css/global.less.css" />
     <link rel="stylesheet" href="static/css/main.less.css" />
-  </head>
+    <!-- HTMLshiv for IE -->
+    <!--[if lte IE 9]><script src="lib/js/html5shiv.min.js"></script><![endif]-->
+    </head>
   <body>
     <div class="warpper">
       <h1><%= title %></h1>
@@ -17,14 +19,9 @@
       <% include ../main/blocks/daily %>
       <% include ../global_blocks/footer %>
 
-      <!-- HTMLshiv for IE -->
-      <!--[if lte IE 9
-      <script src="lib/js/html5shiv.min.js"></script>
-      <![endif]-->
-
-      <!-- dev js:assets -->
       <!-- for requireJS 极致优化 -->
       <script src="lib/js/require.js" data-main="lib/js/main"></script>
+      <!-- dev js:assets -->
       <script src="static/js/main.js"></script>
     </div>
   </body>
