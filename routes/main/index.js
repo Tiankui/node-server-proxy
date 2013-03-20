@@ -6,5 +6,7 @@ exports.routings = {
         //登录
         '/login':{method:'get',processFunction:login_routes.login},
         //获取数据
-        '/getdata':{method:'get',processFunction:getdata_routes.getData}
+        '/getdata':{method:'get',processFunction:getdata_routes.getData},
+         //整合
+         '/getchannel':{method:'get',processFunction:require('./getChannels')()}
     };

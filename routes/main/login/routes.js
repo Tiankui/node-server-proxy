@@ -11,6 +11,7 @@ exports.login = function(req,res){
 		if (err) {
 			res.redirect('/');
 		} else {
+            req.session.loginUser = username;
 			res.redirect(307, 'http://localhost:8080/home/login.do');
 		}
 	});
