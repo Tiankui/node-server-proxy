@@ -1,13 +1,13 @@
 <nav class="header">
-  <ul>
+  <ul class="clearfix">
     <% nav.forEach(function(item){ %>
       <% if(!item.child){ %>
-        <li><a href="<%= item.href %>"><%= item.name %></a></li>
+        <li class="item"><a href="<%= item.href %>"><%= item.name %></a></li>
       <%}else{ %>
-        <li><a href="<%= item.href %>"><%= item.name %></a>
+        <li class="item"><a href="<%= item.href %>"><%= item.name %></a>
           <ul>
           <% item.child.forEach(function(child_item){ %>
-            <li><a href="<%= child_item.href %>"><%= child_item.name %></a>
+            <li class="more"><a href="<%= child_item.href %>"><%= child_item.name %></a>
           <% })%>
           </ul>
         </li>
