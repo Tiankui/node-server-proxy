@@ -1,0 +1,17 @@
+<nav class="header">
+  <ul>
+    <% nav.forEach(function(item){ %>
+      <% if(!item.child){ %>
+        <li><a href="<%= item.href %>"><%= item.name %></a></li>
+      <%}else{ %>
+        <li><a href="<%= item.href %>"><%= item.name %></a>
+          <ul>
+          <% item.child.forEach(function(child_item){ %>
+            <li><a href="<%= child_item.href %>"><%= child_item.name %></a>
+          <% })%>
+          </ul>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</nav>
