@@ -1,29 +1,52 @@
 var sysConfig = require('../config.js');
-exports.request = function(){
+var http = require('http');
+module.exports = function(){
+   function Server(options){
+       this.host = sysConfig.SERVER.HOST;
+       this.port = sysConfig.SERVER.PORT;
+       this.encode = 'utf8';
+       this.path = '';
+       this.method = 'POST';
+       this.reqParam = '';
+       this.dataCarrier = null;
+       this.reqCallback = null;
+       merge(this,options);
+   };
 
-    var serverReqOpts = {
-        host : serverConfig.SERVER.HOST,
-        port :  serverConfig.SERVER.PORT,
-        path:'/portal/index/channel.do',
-        method : 'POST'
-    };
+   Server.prototype.request = function(){
+       var serverReqOpts = {
+           host : this.host,
+           port : this.port,
+           path:  this.path,
+           method : this.method
+       };
+       var self = this;
+       var serverReq = http.request(serverReqOpts, function(serverRes) {
 
-    var serverReq = http.request(serverReqOpts, function(serverRes) {
-        console.log('STATUS: ' + serverRes.statusCode);
-        console.log('HEADERS: ' + JSON.stringify(serverRes.headers));
-        serverRes.setEncoding('utf8');
-        var serverResData = "";
-        serverRes.on('data', function(chunk) {
-            serverResData +=chunk;
+           console.log('STATUS: ' + serverRes.statusCode);
+           console.log('HEADERS: ' + JSON.stringify(serverRes.headers));
 
-        });
-        serverRes.on('end',function(chunk){
-            req.data =  serverResData;
-            next();
-        });
+           serverRes.setEncoding('utf8');
+           self.dataCarrier = "";
+           serverRes.on('data', function(chunk) {
+               self.dataCarrier +=chunk;
+           });
+           serverRes.on('end',self.reqCallback);
 
-    });
-    // write data to request body
-    serverReq.write('{userName:"'+req.session.loginUser+'",requestIp:""}');
-    serverReq.end();
+       });
+       // write data to request body
+       serverReq.write(this.reqParam);
+       serverReq.end();
+
+   }
+    return Server;
 }
+
+var merge = function(a, b){
+    if (a && b) {
+        for (var key in b) {
+            a[key] = b[key];
+        }
+    }
+    return a;
+};

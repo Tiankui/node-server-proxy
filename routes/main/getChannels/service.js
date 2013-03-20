@@ -1,7 +1,14 @@
-var http = require('http');
+var Server = require('../../server')();
 module.exports =function(req, res ,next){
     var requestIp = req.ip;
-
-    req.data =  {title:'我去年买了个表='};
-
+    var dataCarrier = {};
+    var server = new Server({
+        path:'/portal/index/channel.do',
+        dataCarrier:dataCarrier,
+        reqCallback:function(){
+            req.data = server.dataCarrier;
+            next();
+        }
+    });
+    server.request();
 };

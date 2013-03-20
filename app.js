@@ -13,8 +13,6 @@ var express = require('express'),
 var app = express();
 
 app.configure(function () {
-    app.set('port', process.env.PORT || sysConfig.LISTEN_PORT);
-    app.set('server_host', sysConfig.SERVER);
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'ejs');
     app.use(express.favicon());
@@ -22,7 +20,10 @@ app.configure(function () {
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(express.cookieParser());
-    app.use(express.session({ secret: sysConfig.SESSION_SECRET_KEY}));
+    app.use(express.session({
+        secret: sysConfig.SESSION_SECRET_KEY,
+        store: new RedisStore(sysConfig.REDIS)
+    }));
     app.use(app.router);
     //  app.use(require('less-middleware')({ src: __dirname + '/public' }));
     app.use('/lib', express.static(__dirname + '/app/lib'));
@@ -38,11 +39,12 @@ app.configure('development', function () {
 app.configure('production', function () {
     console.log('production mode');
 });
-
+//将app放入全局变量中
+global.appContext  = app;
 //加载路由
 routes(app);
 
-cluster(function () {
+//cluster(function () {
     /**
      http.createServer(app).listen(app.get('port'), function(){
     console.log("Express server listening on port " + app.get('port'));
@@ -53,7 +55,7 @@ cluster(function () {
     var socketService = require('./socket')(server);
     var fileUploadProxy = require('./routes/fileUploadProxy')(server);
 
-    server.listen(app.get('port'), function () {
-        console.log("Express server listening on port " + app.get('port'));
+    server.listen(sysConfig.LISTEN_PORT, function () {
+        console.log("Express server listening on port " + sysConfig.LISTEN_PORT);
     });
-});
+//});
