@@ -4,10 +4,10 @@
       <% if(!item.child){ %>
         <li class="item"><a href="<%= item.href %>"><%= item.name %></a></li>
       <%}else{ %>
-        <li class="item"><a href="<%= item.href %>"><%= item.name %></a>
+        <li class="item more"><a href="<%= item.href %>"><%= item.name %></a>
           <ul>
           <% item.child.forEach(function(child_item){ %>
-            <li class="more"><a href="<%= child_item.href %>"><%= child_item.name %></a>
+            <li><a href="<%= child_item.href %>"><%= child_item.name %></a>
           <% })%>
           </ul>
         </li>

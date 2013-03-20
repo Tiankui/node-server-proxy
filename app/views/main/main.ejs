@@ -11,13 +11,20 @@
     <div class="warpper">
       <h1><%= title %></h1>
       <p>Welcome to <%= title %></p>
+
+      <!-- module loader -->
       <% include ../global_blocks/header %>
+      <% include ../main/blocks/daily %>
       <% include ../global_blocks/footer %>
-      <!-- dev js:assets -->
-      <script src="lib/js/require.js" data-main="lib/js/main"></script>
-      <!--[if lt Imainmain/main
-      <script src="lib/js/html5shiv.js"></script>
+
+      <!-- HTMLshiv for IE -->
+      <!--[if lte IE 9
+      <script src="lib/js/html5shiv.min.js"></script>
       <![endif]-->
+
+      <!-- dev js:assets -->
+      <!-- for requireJS 极致优化 -->
+      <script src="lib/js/require.js" data-main="lib/js/main"></script>
       <script src="static/js/main.js"></script>
     </div>
   </body>

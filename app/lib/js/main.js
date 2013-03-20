@@ -1,8 +1,8 @@
 
 require.config = {
   paths:{
-    jquery: './jquery.js',
-    underscore: './underscore.js',
-    html5shiv: './htmlshiv.js'
+    jquery: './jquery.min.js',
+    underscore: './underscore.min.js',
+    html5shiv: './htmlshiv.min.js'
   }
 };
