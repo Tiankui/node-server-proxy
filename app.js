@@ -25,7 +25,6 @@ app.configure(function () {
     store: new RedisStore(sysConfig.REDIS)
   }));
   app.use(app.router);
-  //  app.use(require('less-middleware')({ src: __dirname + '/public' }));
   app.use('/lib', express['static'](__dirname + '/app/lib'));
   app.use('/static', express['static'](__dirname + '/app/dist'));
   app.use('/static', express['static'](__dirname + '/app/img'));
