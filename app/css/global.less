@@ -5,36 +5,49 @@
 /* font-family */
 body{
   font:12px/1.5 "Microsoft Yahei","微软雅黑",Arial,sans-serif;
-  .b-color
-}
+  .b-color;
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-.warpper{
-  width:960px;
-  margin:0 auto;
-}
+  .warpper{
+    width:960px;
+    margin:0 auto;
+  }
 
-.header{
-  font:14px/1.5 bold;
-  border:1px solid #fff;
-  padding:10px;
-  a{
-    text-decoration:none;
-    &:hover{
-      text-decoration: underline;
+  .header{
+    font-size:14px;
+    border:1px solid #fff;
+    padding:10px;
+    height: 21px;
+    a{
+      text-decoration:none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+    .item{
+      float: left;
+      margin-right: 20px;
+    }
+    .more{
+      position: relative;
+      ul{
+        display: none;
+        position: absolute;
+        top:20px;
+        left:0;
+      }
+      &:hover{
+        ul{display: block;}
+      }
     }
   }
-  .item{
-    float: left;
-    margin-right: 10px;
-    ul{
-      /*display: none;*/
-    }
+
+  footer{
+    font-size: 20px;
   }
 }
-
