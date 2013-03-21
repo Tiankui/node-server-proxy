@@ -1,5 +1,5 @@
 module.exports = {
-    MODE: 'fe',//RD:RD开发模式，所有请求返回JSON至浏览器||FE：FE开发模式，使用静态json数据渲染模板||DEV
+    MODE: 'dev',//RD:RD开发模式，所有请求返回JSON至浏览器||FE：FE开发模式，使用静态json数据渲染模板||DEV
     LISTEN_PORT: 3000,
     SESSION_SECRET_KEY: 'familyNodeServerSession',
     SERVER: {
