@@ -1,4 +1,4 @@
-module.exports = function(req, res ){
+module.exports = function (req, res) {
     //res.render('main/channel', { title: req.data.title });
-    res.json(200,  req.data);
+    res.json(200, req.data);
 };

@@ -3,12 +3,14 @@ module.exports = function (req, res, next) {
     var requestIp = req.ip;
     var dataCarrier = {};
     var server = new Server({
-        path: '/portal/index/channel.do',
-        dataCarrier: dataCarrier,
-        reqCallback: function () {
-            req.data = JSON.parse(server.dataCarrier);
-            next();
-        }
+        path: '/portal/index/channel.do'
     });
     server.request();
+    server.on('response', function (data) {
+        req.data =  JSON.parse(data);
+        next();
+    });
+
 };
+
+

@@ -10,9 +10,9 @@
         "express": "3.1.0",
         "ejs": "*",
         "socket.io": "*",
-        "connect-redis":"*"
+        "connect-redis": "*"
     },
-    "devDependencies":{
+    "devDependencies": {
         "bai": "*"
     }
 }

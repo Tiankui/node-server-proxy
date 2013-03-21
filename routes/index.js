@@ -10,7 +10,7 @@ var getRoutes = function (app, routings) {
         var pf = routings[routing].processFunction;
         if (routings[routing].method == 'get') {
             app.get(routing, pf);
-        }else if (routings[routing].method == 'post') {
+        } else if (routings[routing].method == 'post') {
             app.post(routing, pf);
         } else {
             app.all(routing, pf);
