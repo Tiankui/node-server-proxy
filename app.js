@@ -30,8 +30,8 @@ app.configure(function () {
     app.use('/static', express['static'](__dirname + '/app/img'));
     app.use('/test', express['static'](__dirname + '/codeLab'));
 });
-
-switch (process.argv[2]) {
+var mode = process.argv[2]?process.argv[2]:sysConfig.MODE;
+switch (mode) {
     case 'dev':
         app.set('env', 'development');
         break;
