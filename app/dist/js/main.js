@@ -1,3 +1,7 @@
 require(['jquery','underscore'],function($,_){
-  console.log(_);
+  $.get('articlelist',
+    function (data, textStatus, jqXHR) {
+      $('.header').after(data);
+    }
+  );
 });
