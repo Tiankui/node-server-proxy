@@ -1,4 +1,5 @@
 var sysConfig = require('../config.js');
+var events = require("events");
 var http = require('http');
 module.exports = function(){
    function Server(options){
@@ -10,9 +11,12 @@ module.exports = function(){
        this.reqParam = '';
        this.dataCarrier = null;
        this.reqCallback = null;
+       this.server_emitter=new events.EventEmitter();
        merge(this,options);
    };
-
+   Server.prototype.on = function(eventName,listener){
+       this.server_emitter.on(eventName,listener);
+   };
    Server.prototype.request = function(){
        var serverReqOpts = {
            host : this.host,
@@ -31,7 +35,9 @@ module.exports = function(){
            serverRes.on('data', function(chunk) {
                self.dataCarrier +=chunk;
            });
-           serverRes.on('end',self.reqCallback);
+           serverRes.on('end',function(){
+               self.server_emitter.emit('response',self.dataCarrier);
+           });
 
        });
        // write data to request body
