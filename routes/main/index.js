@@ -3,6 +3,7 @@ var getdata_routes = require('./getdata/routes');
 exports.routings = {
     //首页
     '/': {method: 'get', processFunction: require('./main')()},
+    '/articleList': {method: 'get',processFunction: require('./articleList')()},
     //登录
     '/login': {method: 'get', processFunction: login_routes.login},
     //获取数据
