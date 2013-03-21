@@ -11,6 +11,7 @@ module.exports = function () {
         this.host = sysConfig.SERVER.HOST;   //数据提供端地址
         this.port = sysConfig.SERVER.PORT;
         this.encode = 'utf8';
+        this.reader = 'JSON';
         this.path = '';
         this.method = 'POST';
         this.reqParam = '';
@@ -41,7 +42,20 @@ module.exports = function () {
                 self.dataCarrier += chunk;
             });
             serverRes.on('end', function () {
-                self.server_emitter.emit('response', self.dataCarrier);
+                var data =  self.dataCarrier;
+                /**
+                 *  以后可提取出去作为解析对象使用
+                 *  目前只支持JSON
+                 */
+                if(self.reader.toUpperCase()=='JSON'){
+                    try{
+                        data = JSON.parse(data);
+                    }catch(e){
+                        console.log(e);
+                        data = self.dataCarrier;
+                    }
+                }
+                self.server_emitter.emit('response', data);
             });
 
         });

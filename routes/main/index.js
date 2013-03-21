@@ -1,13 +1,12 @@
-var login_routes = require('./login/routes');
-var getdata_routes = require('./getdata/routes');
+//必须添加否则影响fe与rd模式
+exports.info = {
+    path:__dirname
+};
 exports.routings = {
     //首页
-    '/': {method: 'get', processFunction: require('./main')()},
-    '/articleList': {method: 'get',processFunction: require('./articleList')()},
+    '/': {method: 'get', processFile:'/main'},
+    //ajax获取首页文章列表
+    '/articleList': {method: 'get',processFile: '/articleList'}
     //登录
-    '/login': {method: 'get', processFunction: login_routes.login},
-    //获取数据
-    '/getdata': {method: 'get', processFunction: getdata_routes.getData},
-    //整合
-    '/getchannel': {method: 'get', processFunction: require('./getChannels')()}
+   // '/login': {method: 'get', processFunction:  require('./login/routes').login}
 };
