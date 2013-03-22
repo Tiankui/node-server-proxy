@@ -17,7 +17,7 @@ var getRoutes = function (app, mod) {
         }else{
             switch(app.get('env')){
                 case 'FE':
-                    var feTestService = require('../testRoutes/FeTestService')(moduleInfo.path+routings[routing].processFile);
+                    var feTestService = require('../testRoutes/FeTestService')(path.normalize(moduleInfo.path+routings[routing].processFile));
                     pfArray.push(feTestService,pf[pf.length-1]);
                     break;
                 case 'RD':
