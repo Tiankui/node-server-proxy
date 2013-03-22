@@ -1,17 +1,9 @@
 <div class="daily">
   <h3>今日关注</h3>
   <hr />
-  
-  <img src="static/baidu.jpg" alt="百度力量" />
+  <% articleItems.forEach(function(item){ %>
   <dl>
-    <dt><%= daily.main.title %></dt>
-    <dd><%= daily.main.summary %></dd>
-  </dl>
-
-  <% daily.list.forEach(function(item){ %>
-  <dl>
-    <dt><%= item.title %></dt>
-    <dd><%= item.summary %></dd>
+    <dt>【<%= item.title %>】<%= item.title %></dt>
   </dl>
   <% }) %>
 
