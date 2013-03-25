@@ -8,7 +8,8 @@ var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
-    cluster = require('./cluster');
+    cluster = require('./cluster'),
+    ejs = require('ejs');
 
 var app = express();
 
@@ -30,6 +31,12 @@ app.configure(function () {
     app.use('/static', express['static'](__dirname + '/app/img'));
     app.use('/test', express['static'](__dirname + '/codeLab'));
 });
+
+ejs.filters.truncate_ = function (str, len) {
+  str = String(str);
+  return str.substr(0,len) + '...';
+};
+
 var mode = process.argv[2]?process.argv[2]:sysConfig.MODE;
 switch (mode) {
     case 'dev':
