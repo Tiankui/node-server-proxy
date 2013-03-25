@@ -1,6 +1,31 @@
-var os = require('os');
+var os = require('os')
+    , config = require('../config')
+    , redis = require('socket.io/node_modules/redis')
+    , pub = redis.createClient(config.REDIS.PORT, config.REDIS.HOST)
+    , sub = redis.createClient(config.REDIS.PORT, config.REDIS.HOST)
+    , store = redis.createClient(config.REDIS.PORT, config.REDIS.HOST);
+pub.auth('passwd', function(){console.log("pub登录成功")});
+sub.auth('passwd', function(){console.log("sub登录成功")});
+store.auth('passwd', function(){console.log("store登录成功")});
+
 module.exports = function (server) {
     var io = require('socket.io').listen(server);
+    io.configure(function () {
+        io.enable('browser client minification');  // send minified client
+        io.enable('browser client etag');          // apply etag caching logic based on version number
+        io.enable('browser client gzip');          // gzip the file
+        io.set('log level', 1);                    // reduce logging
+        io.set('transports', [                     // enable all transports (optional if you want flashsocket)
+            'websocket'
+            , 'htmlfile'
+            , 'xhr-polling'
+            , 'jsonp-polling'
+        ]);
+        var RedisStore = require('socket.io/lib/stores/redis');
+        io.set('store', new RedisStore({redisPub: pub, redisSub: sub, redisClient: store}));
+    });
+
+
     io.sockets.on('connection', function (socket) {
         console.log("Connection " + socket.id + " accepted.");
         var sysinfoInterval = setInterval(function () {
