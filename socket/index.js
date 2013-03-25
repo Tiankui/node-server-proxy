@@ -4,9 +4,9 @@ var os = require('os')
     , pub = redis.createClient(config.REDIS.PORT, config.REDIS.HOST)
     , sub = redis.createClient(config.REDIS.PORT, config.REDIS.HOST)
     , store = redis.createClient(config.REDIS.PORT, config.REDIS.HOST);
-pub.auth('passwd', function(){console.log("pub登录成功")});
+/*pub.auth('passwd', function(){console.log("pub登录成功")});
 sub.auth('passwd', function(){console.log("sub登录成功")});
-store.auth('passwd', function(){console.log("store登录成功")});
+store.auth('passwd', function(){console.log("store登录成功")});*/
 
 module.exports = function (server) {
     var io = require('socket.io').listen(server);
@@ -28,7 +28,8 @@ module.exports = function (server) {
 
     io.sockets.on('connection', function (socket) {
         console.log("Connection " + socket.id + " accepted.");
-        var sysinfoInterval = setInterval(function () {
+        var groupName = '';
+        /*var sysinfoInterval = setInterval(function () {
             var sysinfo = {'hostname': os.hostname(),
                 'systemtype': os.type(),
                 'release': os.release(),
@@ -40,13 +41,26 @@ module.exports = function (server) {
                 'disk': ''
             };
             io.sockets.emit('sysinfo', sysinfo);
-        }, 10000);
+        }, 10000);*/
+        socket.on("userLogin", function(data, fn){
+            fn({msg : "Hello " + data.userName});
+            socket.join(data.groupName);
+            groupName = data.groupName;
+            socket.broadcast.to(groupName).json.send({ msg: "傻逼连接了->: " + data.userName, data : data });
+        });
+
+
+        socket.on('userTalk',function(message){
+            console.log('userTalk :'+message.text);
+            //socket.emit('otherUserTalk',{text:message.text});
+            socket.broadcast.to(groupName).json.send(message);
+        });
         socket.on('message', function (message) {
             console.log("Received message: " + message + " - from client " + socket.id);
 
         });
         socket.on('disconnect', function () {
-            clearInterval(sysinfoInterval);
+//            clearInterval(sysinfoInterval);
             console.log("Connection " + socket.id + " terminated.");
         });
     });
