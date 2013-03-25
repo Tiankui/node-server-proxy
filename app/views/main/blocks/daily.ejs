@@ -3,7 +3,7 @@
   <hr />
   <% articleItems.forEach(function(item){ %>
   <dl>
-    <dt>【<%= item.title %>】<%= item.title %></dt>
+    <dt>【<%=: item.title | truncate_:5 %>】<%= item.title %></dt>
   </dl>
   <% }) %>
 

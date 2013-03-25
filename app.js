@@ -10,6 +10,10 @@ var express = require('express'),
     path = require('path'),
     cluster = require('./cluster');
 
+
+//add ejs filters
+require('./ejsFiltersAddon')(require('ejs').filters);
+
 var app = express();
 
 app.configure(function () {
@@ -30,6 +34,8 @@ app.configure(function () {
     app.use('/static', express['static'](__dirname + '/app/img'));
     app.use('/test', express['static'](__dirname + '/codeLab'));
 });
+
+
 var mode = process.argv[2]?process.argv[2]:sysConfig.MODE;
 switch (mode) {
     case 'dev':
