@@ -46,14 +46,14 @@ module.exports = function (server) {
             fn({msg : "Hello " + data.userName});
             socket.join(data.groupName);
             groupName = data.groupName;
-            socket.broadcast.to(groupName).json.send({ msg: "傻逼连接了->: " + data.userName, data : data });
+            io.sockets.in(groupName).emit('userTalk',{ msg: "傻逼连接了->: " + data.userName, data : data });
         });
 
 
         socket.on('userTalk',function(message){
             console.log('userTalk :'+message.text);
             //socket.emit('otherUserTalk',{text:message.text});
-            socket.broadcast.to(groupName).json.send(message);
+            io.sockets.in(groupName).emit('userTalk', message);
         });
         socket.on('message', function (message) {
             console.log("Received message: " + message + " - from client " + socket.id);
@@ -65,14 +65,4 @@ module.exports = function (server) {
         });
     });
 
-    io.sockets.on('connection', function (socket) {
-        console.log("Connection1 " + socket.id + " accepted.");
-        socket.on('message', function (message) {
-            console.log("Received message: " + message + " - from client " + socket.id);
-
-        });
-        socket.on('disconnect', function () {
-            console.log("Connection " + socket.id + " terminated.");
-        });
-    });
 };
