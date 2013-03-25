@@ -16,7 +16,7 @@ require('./ejsFiltersAddon')(require('ejs').filters);
 
 var app = express();
 
-app.configure(function () {
+app.configure(function(){
     app.set('views', __dirname + '/app/views');
     app.set('view engine', 'ejs');
     app.use(express.favicon());
@@ -26,7 +26,7 @@ app.configure(function () {
     app.use(express.cookieParser());
     app.use(express.session({
         secret: sysConfig.SESSION_SECRET_KEY,
-        store: new RedisStore(sysConfig.REDIS)
+        store: new RedisStore({port:sysConfig.REDIS.PORT,host:sysConfig.REDIS.HOST})
     }));
     app.use(app.router);
     app.use('/lib', express['static'](__dirname + '/app/lib'));

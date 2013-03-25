@@ -1,5 +1,6 @@
 var Server = require('../../dataServer')();
 module.exports = function (req, res, next) {
+    req.session.user = 'test';
     var server = new Server({
         path: '/portal/index/channel.do'
     });
