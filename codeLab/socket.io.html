@@ -10,6 +10,8 @@
 
   </head>
   <body>
+  <input type="text" id="userInput"/>
+  <input type="button" id="sendButton" onclick="send();"/>
   <script>
       var socket = io.connect();
       //socket.emit('my event', 'Hello world.')
@@ -23,6 +25,12 @@
               console.log(data);
           })
       });
+      function send(){
+          var inputTxt = document.getElementById('userInput').value;
+          socket.emit('userTalk',{text:inputTxt});
+      }
+
+
   </script>
   </body>
 </html>
