@@ -4,15 +4,17 @@ var cas = new CAS({
     service: 'http://localhost:3000/',
     version: 2.0
 });
-
-
-exports.login = function (req, res) {
+module.exports = function (req, res, next) {
     cas.authenticate(req, res, function (err, status, username, extended) {
+        var data = {};
         if (err) {
-            res.redirect('/');
+            data = {success:false,msg:err};
         } else {
             //req.session.loginUser = username;
-            res.redirect('/');
+            data = {success:true,data:{username:username,status:status}};
         }
+        req.data = data;
+        next();
     });
 };
+
