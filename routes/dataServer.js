@@ -16,7 +16,6 @@ module.exports = function () {
         this.method = 'POST';
         this.reqParam = '';
         this.dataCarrier = null;
-        this.reqCallback = null;
         this.server_emitter = new events.EventEmitter();
         merge(this, options);
     };

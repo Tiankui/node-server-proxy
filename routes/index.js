@@ -1,9 +1,13 @@
 var path = require('path');
-var main_module = require('./main');
 module.exports = function (app) {
-    getRoutes(app, main_module);
+    getRoutes(app, require('./main'));
 };
 
+/*
+ * 路由处理方法
+ * @param app express上下文
+ * @param mod 模块对象
+ */
 var getRoutes = function (app, mod) {
     var routings = mod.routings;
     var moduleInfo = mod.info;
