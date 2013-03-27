@@ -7,7 +7,7 @@ module.exports = {
         PORT: 8080
     },
     REDIS: {
-        HOST: '172.22.234.118',
+        HOST: '172.22.235.5',
         PORT: 6379
     }
 }

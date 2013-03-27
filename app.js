@@ -25,6 +25,7 @@ app.configure(function(){
     app.use(express.methodOverride());
     app.use(express.cookieParser());
     app.use(express.session({
+        key: 'express.sid',
         secret: sysConfig.SESSION_SECRET_KEY,
         store: new RedisStore({port:sysConfig.REDIS.PORT,host:sysConfig.REDIS.HOST})
     }));

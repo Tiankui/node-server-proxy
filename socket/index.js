@@ -1,15 +1,18 @@
-var os = require('os')
+var sysConfig = require('../config.js')
+    , cookie = require('express/node_modules/cookie')
+    , connect = require('express/node_modules/connect')
     , config = require('../config')
     , redis = require('socket.io/node_modules/redis')
     , pub = redis.createClient(config.REDIS.PORT, config.REDIS.HOST)
     , sub = redis.createClient(config.REDIS.PORT, config.REDIS.HOST)
     , store = redis.createClient(config.REDIS.PORT, config.REDIS.HOST);
 /*pub.auth('passwd', function(){console.log("pub登录成功")});
-sub.auth('passwd', function(){console.log("sub登录成功")});
-store.auth('passwd', function(){console.log("store登录成功")});*/
+ sub.auth('passwd', function(){console.log("sub登录成功")});
+ store.auth('passwd', function(){console.log("store登录成功")});*/
 
 module.exports = function (server) {
     var io = require('socket.io').listen(server);
+    global.socketIO = io.sockets;
     io.configure(function () {
         io.enable('browser client minification');  // send minified client
         io.enable('browser client etag');          // apply etag caching logic based on version number
@@ -23,35 +26,31 @@ module.exports = function (server) {
         ]);
         var RedisStore = require('socket.io/lib/stores/redis');
         io.set('store', new RedisStore({redisPub: pub, redisSub: sub, redisClient: store}));
+        //对socket连接进行认证，是否为合法访问
+        io.set('authorization', function (handshakeData, accept) {
+            if (handshakeData.headers.cookie) {
+                handshakeData.cookie = cookie.parse(handshakeData.headers.cookie);
+                handshakeData.sessionID = connect.utils.parseSignedCookie(handshakeData.cookie['express.sid'], sysConfig.SESSION_SECRET_KEY);
+                if (handshakeData.cookie['express.sid'] == handshakeData.sessionID) {
+                    return accept('Cookie非法.', false);
+                }
+            } else {
+                return accept('尚未取得过cookie', false);
+            }
+            accept(null, true);
+        });
     });
 
 
     io.sockets.on('connection', function (socket) {
         console.log("Connection " + socket.id + " accepted.");
         var groupName = '';
-        /*var sysinfoInterval = setInterval(function () {
-            var sysinfo = {'hostname': os.hostname(),
-                'systemtype': os.type(),
-                'release': os.release(),
-                'uptime': os.uptime(),
-                'loadavg': os.loadavg(),
-                'totalmem': os.totalmem(),
-                'freemem': os.freemem(),
-                'cpus': os.cpus(),
-                'disk': ''
-            };
-            io.sockets.emit('sysinfo', sysinfo);
-        }, 10000);*/
-        socket.on("userLogin", function(data, fn){
-            fn({msg : "Hello " + data.userName});
+        socket.on('register', function (data) {
             socket.join(data.groupName);
-            groupName = data.groupName;
-            io.sockets.in(groupName).emit('userTalk',{ msg: "傻逼连接了->: " + data.userName, data : data });
         });
 
-
-        socket.on('userTalk',function(message){
-            console.log('userTalk :'+message.text);
+        socket.on('userTalk', function (message) {
+            console.log('userTalk :' + message.text);
             //socket.emit('otherUserTalk',{text:message.text});
             io.sockets.in(groupName).emit('userTalk', message);
         });
