@@ -1,5 +1,5 @@
 module.exports = {
-    MODE: 'fe',//RD:RD开发模式，所有请求返回JSON至浏览器||FE：FE开发模式，使用静态json数据渲染模板||DEV
+    MODE: 'pro',//RD:RD开发模式，所有请求返回JSON至浏览器||FE：FE开发模式，使用静态json数据渲染模板||DEV
     LISTEN_PORT: 3000,
     SESSION_SECRET_KEY: 'secret',
     SERVER: {
@@ -7,7 +7,7 @@ module.exports = {
         PORT: 8080
     },
     REDIS: {
-        HOST: '172.22.235.5',
+        HOST: '172.22.234.189',
         PORT: 6379
     }
 }
