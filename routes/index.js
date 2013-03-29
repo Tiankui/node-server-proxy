@@ -9,7 +9,8 @@ module.exports = function (app) {
  * @param app express上下文
  * @param mod 模块对象
  */
-var getRoutes = function (app, mod) {
+
+function getRoutes (app, mod) {
     var routings = mod.routings;
     var moduleInfo = mod.info;
     var modulePath = '';
@@ -61,4 +62,4 @@ var getRoutes = function (app, mod) {
             app.all(routing, pfArray);
         }
     }
-};
+}

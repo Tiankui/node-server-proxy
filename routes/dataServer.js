@@ -18,9 +18,10 @@ module.exports = function () {
         this.dataCarrier = null;
         this.server_emitter = new events.EventEmitter();
         merge(this, options);
-    };
+    }
     DataServer.prototype.on = function (eventName, listener) {
         this.server_emitter.on(eventName, listener);
+        return this;
     };
     DataServer.prototype.request = function () {
         var serverReqOpts = {
@@ -61,10 +62,10 @@ module.exports = function () {
         // write data to request body
         serverReq.write(this.reqParam);
         serverReq.end();
-
-    }
+        return self;
+    };
     return DataServer;
-}
+};
 
 var merge = function (a, b) {
     if (a && b) {
