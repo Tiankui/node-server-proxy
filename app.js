@@ -76,10 +76,13 @@ routes(app);
 function startServer() {
     var server = http.createServer(app);
     //socket与文件上传转发服务注册 可考虑合并
-    var socketService = require('./socket')(server);
+    console.log(app.get('env'));
+    if (app.get('env') !== 'FE') {
+      var socketService = require('./socket')(server);
+    }
     var fileUploadProxy = require('./routes/fileUploadProxy')(server);
     server.listen(sysConfig.LISTEN_PORT, function () {
-        console.log("Express server listening on port " + sysConfig.LISTEN_PORT);
+      console.log("Express server listening on port " + sysConfig.LISTEN_PORT);
     });
 }
 

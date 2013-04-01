@@ -10,4 +10,4 @@ module.exports = {
         HOST: '172.22.234.189',
         PORT: 6379
     }
-}
+};

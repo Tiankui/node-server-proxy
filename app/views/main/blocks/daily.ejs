@@ -1,11 +1,9 @@
 <div class="daily">
   <h3>今日关注</h3>
   <hr />
-  <% dataArray.forEach(function(data){%>
-  <% data.articleItems.forEach(function(item){ %>
-  <dl>
-    <dt>【<%=: item.title | truncate_:5 %>】<%= item.title %></dt>
-  </dl>
+  <% articleItems.forEach(function(item){%>
+    <dl>
+      <dt>【<%=: item.title | truncate_:5 %>】<%= item.title %></dt>
+    </dl>
   <% }) %>
-<% }) %>
 </div>
