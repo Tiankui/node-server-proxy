@@ -3,12 +3,12 @@
  */
 
 var express = require('express'),
-RedisStore = require('connect-redis')(express),
-sysConfig = require('./config.js'),
-routes = require('./routes'),
-http = require('http'),
-path = require('path'),
-cluster = require('./cluster');
+    RedisStore = require('connect-redis')(express),
+    sysConfig = require('./config.js'),
+    routes = require('./routes'),
+    http = require('http'),
+    path = require('path'),
+    cluster = require('./cluster');
 
 
 //add ejs filters
@@ -73,10 +73,9 @@ routes(app);
   console.log("Express server listening on port " + app.get('port'));
   });*/
 
-function startServer() {
+function startServer(app) {
   var server = http.createServer(app);
   //socket与文件上传转发服务注册 可考虑合并
-  console.log(app.get('env'));
   if (app.get('env') !== 'FE') {
     var socketService = require('./socket')(server);
   }
@@ -89,8 +88,8 @@ function startServer() {
 
 if (app.get('env') === 'production') {
   cluster(function () {
-    startServer();
+    startServer(app);
   });
 } else {
-  startServer();
+  startServer(app);
 }
