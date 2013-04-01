@@ -16,12 +16,10 @@ run`运行前端监控编译.(建议终端打开两个窗口,此任务不适合`
 
 ##### 工程目录
 - app view和所有静态资源
-  - dist 为编译,合并后的less文件和js文件
-  - lib 将要引入的js库,运行`bai
-lib`将生成对应的`.min.js`文件(此文件夹建议存放未压缩的完整文件)
+- dist 为编译,合并后的less文件和js文件
+- lib 将要引入的js库,运行`bai build`将生成对应的`.min.js`文件(此文件夹建议存放未压缩的完整文件)
 - engine `bai`的配置文件目录,一般不需要修改
-- route
-`express`的routes,按照功能分级,和app/views文件夹一一对应关系,便于维护.
+- route `express`的routes,按照功能分级,和app/views文件夹一一对应关系,便于维护.
 
 ### 前端开发规范
 - 打开两个终端(或dos,分别运行`bai run`(开始自动编译压缩合并)和`node app fe`(开启FE工作模式))
@@ -38,13 +36,11 @@ css的压缩规则是文件夹下的文件作为键名,2级目录下方的是相
   - `static/js/**`为JS文件
   - `static/css/**`为CSS文件
   - `lib/js/**.min`为压缩有的库文件
-  -
-`static/img/**`为图片文件(由于图片压缩的人为性原因,此次编译工具去除了图片自动压缩功能)
+  - `static/img/**`为图片文件(由于图片压缩的人为性原因,此次编译工具去除了图片自动压缩功能)
 
 - views 使用ejs模版,
   - 文档(地址待添加)
-  -
-添加的filters列表查看工程目录下的`ejsFilterAddon.js`文件,以后添加自定义文件也在这里
+  - 添加的filters列表查看工程目录下的`ejsFilterAddon.js`文件,以后添加自定义文件也在这里
 
 - 上线前运行`bai build`(把开发模式下的dist文件替换为压缩文件)
 
