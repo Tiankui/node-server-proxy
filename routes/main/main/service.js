@@ -1,4 +1,4 @@
-var Server = require('data-service')();
+var Server = require('data-service');
 module.exports = function (req, res, next) {
     req.session.user = 'test';
     var server = new Server({
