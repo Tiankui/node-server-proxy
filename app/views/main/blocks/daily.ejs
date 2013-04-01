@@ -2,8 +2,9 @@
   <h3>今日关注</h3>
   <hr />
   <% articleItems.forEach(function(item){%>
-    <dl>
-      <dt>【<%=: item.title | truncate_:5 %>】<%= item.title %></dt>
+    <dl class="clearfix">
+      <dt>【<%=: item.title | truncate_:5 %>】</dt>
+      <dd><%= item.title %></dd>
     </dl>
   <% }) %>
 </div>

@@ -1,0 +1,29 @@
+.header{
+  font-size:14px;
+  border:1px solid #fff;
+  padding:10px;
+  height: 21px;
+  a{
+    text-decoration:none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  .item{
+    float: left;
+    margin-right: 20px;
+  }
+  .more{
+    position: relative;
+    ul{
+      display: none;
+      position: absolute;
+      top:20px;
+      left:0;
+    }
+    &:hover{
+      ul{display: block;}
+    }
+  }
+}
+

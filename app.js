@@ -32,8 +32,7 @@ app.configure(function(){
   app.use(app.router);
   app.use('/lib', express['static'](__dirname + '/app/lib'));
   app.use('/static', express['static'](__dirname + '/app/dist'));
-  app.use('/static', express['static'](__dirname + '/app/img'));
-  app.use('/test', express['static'](__dirname + '/codeLab'));
+  app.use('/static/img', express['static'](__dirname + '/app/img'));
 });
 
 
