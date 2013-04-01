@@ -6,7 +6,6 @@
 - server使用express框架
  
 ### 工程开始步骤
-
 - `git clone`下项目
 - 进入项目目录运行`npm install`安装所需依赖
 - 再运行`npm link bai`(要求全局安装bai,`npm install -g bai`)
@@ -34,11 +33,9 @@ run`运行前端监控编译.(建议终端打开两个窗口,此任务不适合`
   - `static/css/**`为CSS文件
   - `lib/js/**.min`为压缩有的库文件
   - `static/img/**`为图片文件(由于图片压缩的人为性原因,此次编译工具去除了图片自动压缩功能)
-
 - views 使用ejs模版,
   - 文档(地址待添加)
   - 添加的filters列表查看工程目录下的`ejsFilterAddon.js`文件,以后添加自定义文件也在这里
-
 - 上线前运行`bai build`(把开发模式下的dist文件替换为压缩文件)
 
 ##### 贡献者
