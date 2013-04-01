@@ -1,6 +1,6 @@
-var Server = require('data-service')();
+var Server = require('data-service');
 var async = require('async');
-var redis = require('redis');
+var redis = require('redis-service');
 module.exports = function (req, res, next) {
     var redis_client = redis.createClent();
     redis_client.set("stringkey", "string val", function(err, reply){
