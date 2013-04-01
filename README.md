@@ -39,7 +39,8 @@ run`运行前端监控编译.(建议终端打开两个窗口,此任务不适合`
 - 上线前运行`bai build`(把开发模式下的dist文件替换为压缩文件)
 
 ##### 贡献者
-- [PumpingNylon](https://github.com/magicsuny) 
 - [Tiankui] (https://github.com/Tiankui)
+- [PumpingNylon](https://github.com/magicsuny) 
+
 
 
