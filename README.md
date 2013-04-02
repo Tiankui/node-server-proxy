@@ -37,6 +37,7 @@ run`运行前端监控编译.(建议终端打开两个窗口,此任务不适合`
   - 文档([ejs](https://github.com/Tiankui/ejs-doc))
   - 添加的filters列表查看工程目录下的`ejsFilterAddon.js`文件,以后添加自定义文件也在这里
 - 上线前运行`bai build`(把开发模式下的dist文件替换为压缩文件)
+- ![image](app/img/app.png)
 
 ##### 贡献者
 - [Tiankui](https://github.com/Tiankui)
