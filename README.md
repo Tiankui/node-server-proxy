@@ -2,7 +2,7 @@
 
 
 ### 概述
-- 本项目前端使用`bai`作为编译合并工具
+- 本项目前端使用`bai`作为编译合并工具.[BAI](https://github.com/Tiankui/bai)
 - server使用express框架
  
 ### 工程开始步骤
@@ -34,13 +34,14 @@ run`运行前端监控编译.(建议终端打开两个窗口,此任务不适合`
   - `lib/js/**.min`为压缩有的库文件
   - `static/img/**`为图片文件(由于图片压缩的人为性原因,此次编译工具去除了图片自动压缩功能)
 - views 使用ejs模版,
-  - 文档(地址待添加)
+  - 文档([ejs](https://github.com/Tiankui/ejs-doc))
   - 添加的filters列表查看工程目录下的`ejsFilterAddon.js`文件,以后添加自定义文件也在这里
 - 上线前运行`bai build`(把开发模式下的dist文件替换为压缩文件)
+- 工程目录  
+
+![image](app/img/app.png)
 
 ##### 贡献者
-- [Tiankui] (https://github.com/Tiankui)
+- [Tiankui](https://github.com/Tiankui)
 - [PumpingNylon](https://github.com/magicsuny) 
-
-
 
