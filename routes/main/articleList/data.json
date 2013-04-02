@@ -1,4 +1,4 @@
-{"articleCount": 7, "articleItems": [
+{"dataArray":{"articleCount": 7, "articleItems": [
     {
         "id": 671909487,
         "title": "写移动框体验日记，抢三星galaxy手机",
@@ -34,4 +34,4 @@
         "title": "百度云智能终端平台全面开放公测",
         "type": ",资讯"
     }
-]}
+]}}
