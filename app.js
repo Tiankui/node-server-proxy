@@ -18,7 +18,7 @@ log4js.configure({
         type:'dateFile',
         pattern: "-yyyy-MM-dd",
         filename:'./logs/business.log',
-        category:['business','console']
+        category:['business']
     },{
         type:'console'
     },{
