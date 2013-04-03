@@ -1,11 +1,15 @@
 var Server = require('data-service');
+
 module.exports = function (req, res, next) {
     req.session.user = 'test';
-    var server = new Server({
-        path: '/portal/index/channel.do'
-    });
-    server.request();
-    server.on('response', function (data) {
+    new Server({
+        path: '/portal/index/channel.do',
+        reqParam:{
+            params:'test',
+            params1:'test1'
+        }
+    }).request().on('response', function (data) {
+        //logger.info(JSON.stringify(data));
         req.data = data;
         next();
     });

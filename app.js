@@ -8,8 +8,30 @@ var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
+    resVerify = require('./routes/common/resVerify'),
+    log4js = require('log4js'),
     cluster = require('./cluster');
 
+//日志配置
+log4js.configure({
+    appenders:[{
+        type:'dateFile',
+        pattern: "-yyyy-MM-dd",
+        filename:'./logs/business.log',
+        category:['business']
+    },{
+        type:'console'
+    },{
+        type:'dateFile',
+        pattern: "-yyyy-MM-dd",
+        filename:'./logs/server.log',
+        category:['sys','routing','console']
+    }],
+    replaceConsole:true
+});
+
+var logger = log4js.getLogger('routing');
+logger.setLevel('INFO');
 
 //add ejs filters
 require('./ejsFiltersAddon')(require('ejs').filters);
@@ -19,8 +41,8 @@ var app = express();
 app.configure(function(){
   app.set('views', __dirname + '/app/views');
   app.set('view engine', 'ejs');
+  app.use(log4js.connectLogger(logger, { level: log4js.levels.INFO }));
   app.use(express.favicon());
-  app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
@@ -30,6 +52,7 @@ app.configure(function(){
     store: new RedisStore({port:sysConfig.REDIS.PORT,host:sysConfig.REDIS.HOST})
   }));
   app.use(app.router);
+  app.use(resVerify);
   app.use('/lib', express['static'](__dirname + '/app/lib'));
   app.use('/static', express['static'](__dirname + '/app/dist'));
   app.use('/static/img', express['static'](__dirname + '/app/img'));
@@ -80,7 +103,7 @@ function startServer(app) {
   }
   var fileUploadProxy = require('./routes/fileUploadProxy')(server);
   server.listen(sysConfig.LISTEN_PORT, function () {
-    console.log("Express server listening on port " + sysConfig.LISTEN_PORT);
+    console.log("服务启动，监听端口：" + sysConfig.LISTEN_PORT);
   });
 }
 
