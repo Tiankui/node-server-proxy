@@ -12,7 +12,8 @@
         "socket.io": "*",
         "async":"*",
         "xml2js":"*",
-        "connect-redis": "*"
+        "connect-redis": "*",
+        "log4js":"0.5.7"
     },
     "devDependencies": {
         "bai": "*"
