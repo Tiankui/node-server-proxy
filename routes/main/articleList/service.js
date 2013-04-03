@@ -146,7 +146,7 @@ module.exports = function (req, res, next) {
         }
     ], function(err,results){
         req.data = {dataArray:results[0]};
-        console.log(require('util').inspect(req.data.dataArray[0],{depth:4}));
+        //console.log(require('util').inspect(req.data.dataArray[0],{depth:4}));
         next();
     });
 
