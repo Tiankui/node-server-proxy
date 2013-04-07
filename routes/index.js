@@ -62,6 +62,12 @@ function getRoutes (app, mod) {
             pfArray = pfArray.concat(require('./common/authFilter'),pfArray);
         }
 
+        //判断盖模块是否需要授权才能访问
+        if(currentRouting.needLogin){
+            //增加权限校验中间件
+            pfArray = pfArray.concat(require('./common/loginFilter'),pfArray);
+        }
+
         //根据method类别注册路由
         if (currentRouting.method == 'get') {
             app.get(routing, pfArray);
