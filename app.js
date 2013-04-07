@@ -8,7 +8,6 @@ var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
-    resVerify = require('./routes/common/resVerify'),
     log4js = require('log4js'),
     cluster = require('./cluster');
 
@@ -52,7 +51,6 @@ app.configure(function(){
     store: new RedisStore({port:sysConfig.REDIS.PORT,host:sysConfig.REDIS.HOST})
   }));
   app.use(app.router);
-  app.use(resVerify);
   app.use('/lib', express['static'](__dirname + '/app/lib'));
   app.use('/static', express['static'](__dirname + '/app/dist'));
   app.use('/static/img', express['static'](__dirname + '/app/img'));
