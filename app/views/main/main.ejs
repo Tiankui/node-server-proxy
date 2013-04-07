@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>111</title>
     <!-- dev css:assets -->
     <!-- base: normalize,color,hf.css -->
     <link rel="stylesheet" href="/static/css/global.less.css" />
@@ -11,12 +11,13 @@
     </head>
   <body>
     <div class="warpper">
-      <h1><%= title %></h1>
-      <p>Welcome to <%= title %></p>
+      <h1>title</h1>
+      <p>Welcome to title</p>
 
       <!-- module loader -->
       <% include ../global_blocks/header %>
       <% include ../global_blocks/footer %>
+      <% include blocks/todayFocus %>
 
       <img src="/static/img/baidu.jpg" alt="" />
       <!-- for requireJS 极致优化 -->

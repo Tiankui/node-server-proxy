@@ -352,3 +352,1099 @@
 [2013-04-03 17:14:13.916] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
 [2013-04-03 17:14:13.917] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
 [2013-04-03 17:14:13.944] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-03 23:16:55.279] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:17:04.588] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:4
+    2| <html>
+    3|   <head>
+ >> 4|     <title><%= title %></title>
+    5|     <!-- dev css:assets -->
+    6|     <!-- base: normalize,color,hf.css -->
+    7|     <link rel="stylesheet" href="/static/css/global.less.css" />
+
+title is not defined
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:29:88)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+[2013-04-03 23:17:41.273] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:17:42.992] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:14
+    12|   <body>
+    13|     <div class="warpper">
+ >> 14|       <h1><%= title %></h1>
+    15|       <p>Welcome to <%= title %></p>
+    16| 
+    17|       <!-- module loader -->
+
+title is not defined
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:29:478)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+[2013-04-03 23:17:58.790] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:17:59.640] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:15
+    13|     <div class="warpper">
+    14|       <h1>title</h1>
+ >> 15|       <p>Welcome to <%= title %></p>
+    16| 
+    17|       <!-- module loader -->
+    18|       <% include ../global_blocks/header %>
+
+title is not defined
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:29:510)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+[2013-04-03 23:18:20.388] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:18:21.509] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:3
+    1| <!DOCTYPE html>
+    2| <html>
+ >> 3|   <head>
+    4|     <title>111</title>
+    5|     <!-- dev css:assets -->
+    6|     <!-- base: normalize,color,hf.css -->
+
+nav is not defined
+    at buf.push.<!DOCTYPE html>
+<html>
+  <head>
+    <title>111</title>
+    <!-- dev css:assets -->
+    <!-- base: normalize,color,hf.css -->
+    <link rel="stylesheet" href="/static/css/global.less.css" />
+    <link rel="stylesheet" href="/static/css/main.less.css" />
+    <!-- HTMLshiv for IE -->
+    <!--[if lte IE 9]><script src="/lib/js/html5shiv.min.js"></script><![endif]-->
+    </head>
+  <body>
+    <div class="warpper">
+      <h1>title</h1>
+      <p>Welcome to title</p>
+
+      <!-- module loader -->
+      .
+      .buf (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:30:84)
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:31:23)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+[2013-04-03 23:19:23.755] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:19:24.612] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:3
+    1| <!DOCTYPE html>
+    2| <html>
+ >> 3|   <head>
+    4|     <title>111</title>
+    5|     <!-- dev css:assets -->
+    6|     <!-- base: normalize,color,hf.css -->
+
+nav is not defined
+    at buf.push.<!DOCTYPE html>
+<html>
+  <head>
+    <title>111</title>
+    <!-- dev css:assets -->
+    <!-- base: normalize,color,hf.css -->
+    <link rel="stylesheet" href="/static/css/global.less.css" />
+    <link rel="stylesheet" href="/static/css/main.less.css" />
+    <!-- HTMLshiv for IE -->
+    <!--[if lte IE 9]><script src="/lib/js/html5shiv.min.js"></script><![endif]-->
+    </head>
+  <body>
+    <div class="warpper">
+      <h1>title</h1>
+      <p>Welcome to title</p>
+
+      <!-- module loader -->
+      .
+      .buf (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:30:84)
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:31:23)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+[2013-04-03 23:20:03.567] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:20:04.838] [INFO] console - { notice: [ { id: 1, title: '标题内容', type: '总部' } ],
+  channel: 
+   [ { name: '新闻中心',
+       showName: '新闻中心',
+       url: 'http://family.baidu.com/news',
+       target: '_blank',
+       child: [Object] } ],
+  quickMenu: 
+   [ { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' } ],
+  todayFocus: 
+   [ { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  todayFocusCarousel: 
+   [ { id: 1, title: '轮播图标题', imgSrc: 'http://sss' },
+     { id: 1, title: '轮播图标题', imgSrc: 'http://sss' },
+     { id: 1, title: '轮播图标题', imgSrc: 'http://sss' } ],
+  interact: 
+   [ { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 } ],
+  peopleInBaidu: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  subject: 
+   [ { id: 1, title: '专题1', imgSrc: 'http://sss', articles: [Object] },
+     { id: 1, title: '专题1', imgSrc: 'http://sss', articles: [Object] } ],
+  AD: { id: 1, title: '这玩意儿的标题', imgSrc: 'http://sss' },
+  newProductBBS: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' } ],
+  hotProductBBS: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' } ],
+  cooperativeProduct: 
+   [ { id: 1, title: '移动云', imgSrc: 'http://ssss' },
+     { id: 1, title: '移动云', imgSrc: 'http://ssss' },
+     { id: 1, title: '移动云', imgSrc: 'http://ssss' } ],
+  departmentSpirit: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  NASDAQ: 
+   { name: 'NASDAQ BIDU',
+     nasDate: '2013-04-01',
+     cq: [ 83.1, -1.23, 1.51 ],
+     deal: 40000 },
+  video: { id: 1, title: '视频标题', videoSrc: 'http://ssss' } }
+[2013-04-03 23:20:04.871] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:3
+    1| <!DOCTYPE html>
+    2| <html>
+ >> 3|   <head>
+    4|     <title>111</title>
+    5|     <!-- dev css:assets -->
+    6|     <!-- base: normalize,color,hf.css -->
+
+nav is not defined
+    at buf.push.<!DOCTYPE html>
+<html>
+  <head>
+    <title>111</title>
+    <!-- dev css:assets -->
+    <!-- base: normalize,color,hf.css -->
+    <link rel="stylesheet" href="/static/css/global.less.css" />
+    <link rel="stylesheet" href="/static/css/main.less.css" />
+    <!-- HTMLshiv for IE -->
+    <!--[if lte IE 9]><script src="/lib/js/html5shiv.min.js"></script><![endif]-->
+    </head>
+  <body>
+    <div class="warpper">
+      <h1>title</h1>
+      <p>Welcome to title</p>
+
+      <!-- module loader -->
+      .
+      .buf (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:30:84)
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:31:23)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:3:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+[2013-04-03 23:21:42.962] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:21:43.766] [INFO] console - { notice: [ { id: 1, title: '标题内容', type: '总部' } ],
+  channel: 
+   [ { name: '新闻中心',
+       showName: '新闻中心',
+       url: 'http://family.baidu.com/news',
+       target: '_blank',
+       child: [Object] } ],
+  quickMenu: 
+   [ { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' } ],
+  todayFocus: 
+   [ { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  todayFocusCarousel: 
+   [ { id: 1, title: '轮播图标题', imgSrc: 'http://sss' },
+     { id: 1, title: '轮播图标题', imgSrc: 'http://sss' },
+     { id: 1, title: '轮播图标题', imgSrc: 'http://sss' } ],
+  interact: 
+   [ { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 } ],
+  peopleInBaidu: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  subject: 
+   [ { id: 1, title: '专题1', imgSrc: 'http://sss', articles: [Object] },
+     { id: 1, title: '专题1', imgSrc: 'http://sss', articles: [Object] } ],
+  AD: { id: 1, title: '这玩意儿的标题', imgSrc: 'http://sss' },
+  newProductBBS: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' } ],
+  hotProductBBS: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' } ],
+  cooperativeProduct: 
+   [ { id: 1, title: '移动云', imgSrc: 'http://ssss' },
+     { id: 1, title: '移动云', imgSrc: 'http://ssss' },
+     { id: 1, title: '移动云', imgSrc: 'http://ssss' } ],
+  departmentSpirit: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  NASDAQ: 
+   { name: 'NASDAQ BIDU',
+     nasDate: '2013-04-01',
+     cq: [ 83.1, -1.23, 1.51 ],
+     deal: 40000 },
+  video: { id: 1, title: '视频标题', videoSrc: 'http://ssss' } }
+[2013-04-03 23:21:43.793] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:3
+    1| <!DOCTYPE html>
+    2| <html>
+ >> 3|   <head>
+    4|     <title>111</title>
+    5|     <!-- dev css:assets -->
+    6|     <!-- base: normalize,color,hf.css -->
+
+nav is not defined
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:30:84)
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:31:23)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:3:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+[2013-04-03 23:22:03.535] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:22:04.323] [INFO] console - { notice: [ { id: 1, title: '标题内容', type: '总部' } ],
+  channel: 
+   [ { name: '新闻中心',
+       showName: '新闻中心',
+       url: 'http://family.baidu.com/news',
+       target: '_blank',
+       child: [Object] } ],
+  quickMenu: 
+   [ { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' },
+     { id: '1', name: '全景图', url: 'http://family.baidu.com' } ],
+  todayFocus: 
+   [ { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是新闻啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  todayFocusCarousel: 
+   [ { id: 1, title: '轮播图标题', imgSrc: 'http://sss' },
+     { id: 1, title: '轮播图标题', imgSrc: 'http://sss' },
+     { id: 1, title: '轮播图标题', imgSrc: 'http://sss' } ],
+  interact: 
+   [ { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 },
+     { id: 1, title: '标题', summary: '摘要', joinCount: 100 } ],
+  peopleInBaidu: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  subject: 
+   [ { id: 1, title: '专题1', imgSrc: 'http://sss', articles: [Object] },
+     { id: 1, title: '专题1', imgSrc: 'http://sss', articles: [Object] } ],
+  AD: { id: 1, title: '这玩意儿的标题', imgSrc: 'http://sss' },
+  newProductBBS: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       pubDate: '2013-04-01 12:00:00',
+       keyWord: '关键字' } ],
+  hotProductBBS: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       type: '焦点',
+       commentCount: 4,
+       keyWord: '关键字' } ],
+  cooperativeProduct: 
+   [ { id: 1, title: '移动云', imgSrc: 'http://ssss' },
+     { id: 1, title: '移动云', imgSrc: 'http://ssss' },
+     { id: 1, title: '移动云', imgSrc: 'http://ssss' } ],
+  departmentSpirit: 
+   [ { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' },
+     { id: 1,
+       title: '我是任在百度啊',
+       imgSrc: 'http://地址',
+       type: '焦点',
+       isHot: true,
+       isNew: false,
+       keyWord: '关键字' } ],
+  NASDAQ: 
+   { name: 'NASDAQ BIDU',
+     nasDate: '2013-04-01',
+     cq: [ 83.1, -1.23, 1.51 ],
+     deal: 40000 },
+  video: { id: 1, title: '视频标题', videoSrc: 'http://ssss' } }
+[2013-04-03 23:25:42.942] [INFO] console - 服务启动，监听端口：3000
+[2013-04-03 23:25:48.097] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:3
+    1| <!DOCTYPE html>
+    2| <html>
+ >> 3|   <head>
+    4|     <title>111</title>
+    5|     <!-- dev css:assets -->
+    6|     <!-- base: normalize,color,hf.css -->
+
+nav is not defined
+    at buf.push.<!DOCTYPE html>
+<html>
+  <head>
+    <title>111</title>
+    <!-- dev css:assets -->
+    <!-- base: normalize,color,hf.css -->
+    <link rel="stylesheet" href="/static/css/global.less.css" />
+    <link rel="stylesheet" href="/static/css/main.less.css" />
+    <!-- HTMLshiv for IE -->
+    <!--[if lte IE 9]><script src="/lib/js/html5shiv.min.js"></script><![endif]-->
+    </head>
+  <body>
+    <div class="warpper">
+      <h1>title</h1>
+      <p>Welcome to title</p>
+
+      <!-- module loader -->
+      .
+      .buf (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:30:84)
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:31:23)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+[2013-04-03 23:26:14.006] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:01:23.295] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:01:37.929] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1114 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.055] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 200 2721 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.058] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 200 122 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.092] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 200 157 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.102] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 200 85152 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.115] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 200 80196 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.347] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 200 142 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.351] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 200 41550 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.370] [INFO] routing - 127.0.0.1 - - "GET /favicon.ico HTTP/1.1" 200 1406 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.373] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 200 268380 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:01:38.484] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/blocks/daily.ejs:4
+    2|   <h3>今日关注</h3>
+    3|   <hr />
+ >> 4|   <% peopleInBaidu.forEach(function(item){%>
+    5|     <dl class="clearfix">
+    6|       <dt>【<%=: item.title | truncate_:5 %>】</dt>
+    7|       <dd><%= item.title %></dd>
+
+peopleInBaidu is not defined
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:29:83)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+[2013-04-06 14:01:38.485] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1509 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:17.442] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:11:20.399] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1114 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.531] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.537] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.539] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.542] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.543] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.643] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.646] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.646] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:11:20.676] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:11:20.678] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:11.486] [ERROR] console - Error: ENOENT, no such file or directory '/Users/Yun/code/frontend/works/node-server-proxy/app/views/main/block/todayFocus.ejs'
+    at Object.fs.openSync (fs.js:413:18)
+    at fs.readFileSync (fs.js:270:15)
+    at Object.exports.parse (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:159:19)
+    at exports.compile (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:222:15)
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:273:10)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+[2013-04-06 14:12:11.487] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 500 1135 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:22.870] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1517 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.110] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.123] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.125] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.126] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.127] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.205] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.206] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.207] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:12:23.229] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:12:23.231] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.285] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1517 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.486] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.500] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.505] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.506] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.507] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.612] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.628] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.630] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:01.653] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:14:01.655] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:17.527] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:14:19.677] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1499 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.888] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.892] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.893] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.894] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.909] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.996] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.998] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:19.999] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:14:20.095] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:14:20.097] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:36.619] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:16:39.743] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1490 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:39.930] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:39.932] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:39.934] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:39.935] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:39.936] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:40.055] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:40.056] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:40.057] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:16:40.118] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:16:40.120] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:10.155] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:17:12.316] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1508 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.552] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.565] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.566] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.566] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.567] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.671] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.672] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.673] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:12.697] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:17:12.701] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.671] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1508 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.906] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.907] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.909] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.910] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.911] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.998] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:29.999] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:30.000] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:30.022] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:17:30.024] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:34.622] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:17:36.571] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1514 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.785] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.788] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.791] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.795] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.803] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.879] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.880] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.881] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:17:36.906] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:17:36.913] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.255] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1514 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.484] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.485] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.486] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.488] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.493] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.582] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.583] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.583] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:19:56.605] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:19:56.613] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:01.069] [INFO] console - 服务启动，监听端口：3000
+[2013-04-06 14:20:02.828] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1508 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.053] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.062] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.066] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.068] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.069] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.174] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.177] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.178] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:20:03.202] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:20:03.206] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.345] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1500 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.541] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.542] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.544] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.546] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.548] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.633] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.636] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.637] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:15.662] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:24:15.665] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.562] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1545 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.777] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.779] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.781] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.782] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.784] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.862] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.863] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.863] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:24:38.885] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:24:38.886] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.295] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1474 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.506] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.511] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.514] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.517] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.518] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.648] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.649] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.650] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:11.673] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:25:11.677] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.263] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1474 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.392] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.395] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.403] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.416] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.418] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.509] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.510] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.520] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:31.548] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:25:31.549] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.266] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1474 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.469] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.469] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.470] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.471] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.471] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.595] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.596] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.598] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:25:58.631] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:25:58.634] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:11.817] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1474 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.021] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.028] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.029] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.030] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.032] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.118] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.119] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.128] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:26:12.166] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:26:12.178] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.367] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1480 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.579] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.607] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.610] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.611] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.612] [INFO] routing - 127.0.0.1 - - "GET /static/img/baidu.jpg HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.718] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.723] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.723] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-06 14:35:41.745] [ERROR] console - Error: Failed to lookup view "main/blocks/daily"
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:493:17)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/articleList/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at /Users/Yun/code/frontend/works/node-server-proxy/testRoutes/FeTestService.js:8:13
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+    at param (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:135:11)
+    at pass (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:142:5)
+    at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
+    at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
+[2013-04-06 14:35:41.747] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"

@@ -1,6 +1,9 @@
+<div class="headbar">
+  
+</div>
 <nav class="header">
   <ul class="clearfix">
-    <% nav.forEach(function(item){ %>
+    <% channel.forEach(function(item){ %>
       <% if(!item.child){ %>
         <li class="item"><a href="<%= item.href %>"><%= item.name %></a></li>
       <%}else{ %>
