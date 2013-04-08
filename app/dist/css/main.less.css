@@ -1,1 +1,4 @@
-.back-eee{background-color:#eee}.back-red{background-color:red}.daily{background-color:red}.daily dt,.daily dd{float:left}
+.daily dt,
+.daily dd {
+  float: left;
+}

@@ -11,15 +11,15 @@
     </head>
   <body>
     <div class="warpper">
-      <h1>title</h1>
-      <p>Welcome to title</p>
+
 
       <!-- module loader -->
       <% include ../global_blocks/header %>
-      <% include ../global_blocks/footer %>
       <% include blocks/todayFocus %>
 
       <img src="/static/img/baidu.jpg" alt="" />
+
+       <% include ../global_blocks/footer %>
       <!-- for requireJS 极致优化 -->
       <script src="/lib/js/require.js" data-main="/lib/js/main"></script>
       <!-- dev js:assets -->
