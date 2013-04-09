@@ -1,18 +1,15 @@
 {
-    "name": "node-server-proxy",
-    "version": "0.0.1",
+    "name": "daibi",
+    "version": "0.1.0",
     "private": true,
     "scripts": {
         "start": "node app"
     },
-    "author": "FE (BP&IT)",
+    "author": "Tiankui,Sunyao",
     "dependencies": {
         "express": "3.1.0",
         "ejs": "*",
-        "socket.io": "*",
         "async":"*",
-        "xml2js":"*",
-        "connect-redis": "*",
         "log4js":"0.5.7",
         "bai": "*"
     }

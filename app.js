@@ -3,22 +3,17 @@
  */
 
 var express = require('express'),
-    sysConfig = require('./config.js'),
-    RedisStore = require('connect-redis')(express),
-    routes = require('./routes'),
-    http = require('http'),
-    path = require('path'),
-    log4js = require('log4js'),
-    logger = log4js.getLogger('routing'),
-    cluster = require('./cluster'),
-    app = express();
-
+sysConfig = require('./config/config.js'),
+routes = require('./routes'), 
+log4js = require('log4js'),
+logger = log4js.getLogger('routing'),
+cluster = require('./lib/cluster'),
+app = express();
 
 //add ejs filters
-require('./ejsFiltersAddon')(require('ejs').filters);
-
+require('./lib/ejsFiltersAddon')(require('ejs').filters);
 //Log config
-require('./logConfig')(log4js);
+require('./config/logConfig')(log4js);
 logger.setLevel('INFO');
 
 app.configure(function(){
@@ -32,7 +27,7 @@ app.configure(function(){
   app.use(express.session({
     key: 'express.sid',
     secret: sysConfig.SESSION_SECRET_KEY,
-    store: new RedisStore({port:sysConfig.REDIS.PORT,host:sysConfig.REDIS.HOST})
+    // store: new RedisStore({port:sysConfig.REDIS.PORT,host:sysConfig.REDIS.HOST})
   }));
   app.use(app.router);
   app.use('/lib', express['static'](__dirname + '/app/lib'));
@@ -40,27 +35,21 @@ app.configure(function(){
   app.use('/static/img', express['static'](__dirname + '/app/img'));
 });
 
+app.set('env',process.argv[2]?process.argv[2]:sysConfig.MODE);
 
-app.set('env',process.argv[2]?process.argv[2]:sysConfig.MODE)
-
-//将app放入全局变量中
-global.appContext = app;
-//加载路由
-routes(app);
-
-function startServer(app) {
-    app.listen(sysConfig.LISTEN_PORT, function () {
-    console.log("服务启动，监听端口：" + sysConfig.LISTEN_PORT);
-  });
-}
+//routes
+app.get('/',routes.index);
 
 if (app.get('env') === 'pro') {
   console.log('production mode');
   cluster(function () {
-    startServer(app);
+    app.listen(sysConfig.LISTEN_PORT, function () {
+      console.log("服务启动，监听端口：" + sysConfig.LISTEN_PORT);
+    });
   });
-  
-} else {
+}else{
   console.log('development mode');
-  startServer(app);
+  app.listen(sysConfig.LISTEN_PORT, function () {
+    console.log("服务启动，监听端口：" + sysConfig.LISTEN_PORT);
+  });
 }
