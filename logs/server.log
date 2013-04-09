@@ -316,3 +316,12 @@
 [2013-04-09 20:30:24.006] [INFO] routing - 127.0.0.1 - - "GET /static/img/img.png HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
 [2013-04-09 20:30:24.009] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 200 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
 [2013-04-09 20:30:24.021] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 200 8130 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:12.088] [INFO] console - development mode
+[2013-04-09 20:35:12.092] [INFO] console - 服务启动，监听端口：3000
+[2013-04-09 20:35:14.613] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 654 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:14.739] [INFO] routing - 127.0.0.1 - - "GET /lib/js/jquery.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:14.741] [INFO] routing - 127.0.0.1 - - "GET /lib/js/underscore.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:14.742] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:14.748] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 200 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:14.749] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 200 8130 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
+[2013-04-09 20:35:14.759] [INFO] routing - 127.0.0.1 - - "GET /static/img/img.png HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.43 Safari/537.31"
