@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DIR=/home/Yun/server
+DIR=/home/Yun/daibi
 
 case $1 in
   start)
