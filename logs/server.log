@@ -1965,3 +1965,49 @@ peopleInBaidu is not defined
     at Router._dispatch (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:170:5)
     at Object.router (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:33:10)
 [2013-04-08 21:17:03.809] [INFO] routing - 127.0.0.1 - - "GET /articlelist HTTP/1.1" 500 1193 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 15:25:11.792] [INFO] console - 服务启动，监听端口：3000
+[2013-04-09 19:23:29.981] [INFO] console - development mode
+[2013-04-09 19:23:29.985] [INFO] console - 服务启动，监听端口：3000
+[2013-04-09 19:23:40.949] [ERROR] console - ReferenceError: /Users/Yun/code/frontend/works/node-server-proxy/app/views/main/main.ejs:6
+    4|     <title>111</title>
+    5|     <!-- dev css:assets -->
+ >> 6|     <!-- base: normalize,color,hf.css -->
+    7|     <link rel="stylesheet" href="/static/css/global.less.css" />
+    8|     <link rel="stylesheet" href="/static/css/main.less.css" />
+    9|     <!-- HTMLshiv for IE -->
+
+channel is not defined
+    at buf.push.<!DOCTYPE html>
+<html>
+  <head>
+    <title>111</title>
+    <!-- dev css:assets -->
+    <!-- base: normalize,color,hf.css -->
+    <link rel="stylesheet" href="/static/css/global.less.css" />
+    <link rel="stylesheet" href="/static/css/main.less.css" />
+    <!-- HTMLshiv for IE -->
+    <!--[if lte IE 9]><script src="/lib/js/html5shiv.min.js"></script><![endif]-->
+    </head>
+  <body>
+    .
+    <div class="warpper">
+      <!-- module loader -->
+      .buf (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:30:119)
+    at eval (eval at <anonymous> (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:234:12), <anonymous>:31:23)
+    at /Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:239:15
+    at Object.exports.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:277:13)
+    at View.exports.renderFile [as engine] (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/ejs/lib/ejs.js:303:22)
+    at View.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/view.js:75:8)
+    at Function.app.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/application.js:504:10)
+    at ServerResponse.res.render (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/response.js:753:7)
+    at module.exports (/Users/Yun/code/frontend/works/node-server-proxy/routes/main/main/view.js:2:9)
+    at callbacks (/Users/Yun/code/frontend/works/node-server-proxy/node_modules/express/lib/router/index.js:161:37)
+[2013-04-09 19:23:42.648] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 500 2060 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 19:25:23.764] [INFO] console - development mode
+[2013-04-09 19:25:23.768] [INFO] console - 服务启动，监听端口：3000
+[2013-04-09 19:25:26.616] [INFO] routing - 127.0.0.1 - - "GET / HTTP/1.1" 200 1578 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 19:25:26.690] [INFO] routing - 127.0.0.1 - - "GET /static/css/global.less.css HTTP/1.1" 404 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 19:25:26.705] [INFO] routing - 127.0.0.1 - - "GET /static/css/main.less.css HTTP/1.1" 404 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 19:25:26.712] [INFO] routing - 127.0.0.1 - - "GET /static/js/main.js HTTP/1.1" 404 - "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 19:25:26.719] [INFO] routing - 127.0.0.1 - - "GET /lib/js/require.js HTTP/1.1" 200 80196 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"
+[2013-04-09 19:25:26.880] [INFO] routing - 127.0.0.1 - - "GET /lib/js/main.min.js HTTP/1.1" 200 122 "http://localhost:3000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/536.28.10 (KHTML, like Gecko) Version/6.0.3 Safari/536.28.10"

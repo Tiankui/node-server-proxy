@@ -41,7 +41,7 @@ function getRoutes (app, mod) {
         }else{
             //判断开发模式加载不同处理层
             switch(app.get('env')){
-                case 'FE':
+                case 'dev':
                     var feTestService = require('../testRoutes/FeTestService')(processFilePath);
                     pfArray.push(feTestService,pf[pf.length-1]);
                     break;

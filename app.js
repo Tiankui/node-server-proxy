@@ -3,39 +3,23 @@
  */
 
 var express = require('express'),
-    RedisStore = require('connect-redis')(express),
     sysConfig = require('./config.js'),
+    RedisStore = require('connect-redis')(express),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
     log4js = require('log4js'),
-    cluster = require('./cluster');
+    logger = log4js.getLogger('routing'),
+    cluster = require('./cluster'),
+    app = express();
 
-//日志配置
-log4js.configure({
-    appenders:[{
-        type:'dateFile',
-        pattern: "-yyyy-MM-dd",
-        filename:'./logs/business.log',
-        category:['business']
-    },{
-        type:'console'
-    },{
-        type:'dateFile',
-        pattern: "-yyyy-MM-dd",
-        filename:'./logs/server.log',
-        category:['sys','routing','console']
-    }],
-    replaceConsole:true
-});
-
-var logger = log4js.getLogger('routing');
-logger.setLevel('INFO');
 
 //add ejs filters
 require('./ejsFiltersAddon')(require('ejs').filters);
 
-var app = express();
+//Log config
+require('./logConfig')(log4js);
+logger.setLevel('INFO');
 
 app.configure(function(){
   app.set('views', __dirname + '/app/views');
@@ -57,59 +41,26 @@ app.configure(function(){
 });
 
 
-var mode = process.argv[2]?process.argv[2]:sysConfig.MODE;
-switch (mode) {
-  case 'dev':
-    app.set('env', 'development');
-  break;
-  case 'pro':
-    app.set('env', 'production');
-  break;
-  case 'fe':
-    app.set('env', 'FE');
-  break;
-  case 'rd':
-    app.set('env', 'RD');
-  break;
-  default:
-    app.set('env', 'development');
-}
-
-app.configure('development', function () {
-  console.log('development mode');
-});
-
-app.configure('production', function () {
-  console.log('production mode');
-});
+app.set('env',process.argv[2]?process.argv[2]:sysConfig.MODE)
 
 //将app放入全局变量中
 global.appContext = app;
 //加载路由
 routes(app);
 
-/**
-  http.createServer(app).listen(app.get('port'), function(){
-  console.log("Express server listening on port " + app.get('port'));
-  });*/
-
 function startServer(app) {
-  var server = http.createServer(app);
-  //socket与文件上传转发服务注册 可考虑合并
-  if (app.get('env') !== 'FE') {
-    var socketService = require('./socket')(server);
-  }
-  var fileUploadProxy = require('./routes/fileUploadProxy')(server);
-  server.listen(sysConfig.LISTEN_PORT, function () {
+    app.listen(sysConfig.LISTEN_PORT, function () {
     console.log("服务启动，监听端口：" + sysConfig.LISTEN_PORT);
   });
 }
 
-
-if (app.get('env') === 'production') {
+if (app.get('env') === 'pro') {
+  console.log('production mode');
   cluster(function () {
     startServer(app);
   });
+  
 } else {
+  console.log('development mode');
   startServer(app);
 }

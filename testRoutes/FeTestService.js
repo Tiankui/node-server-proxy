@@ -12,7 +12,4 @@ module.exports = function(modulePath){
             next();
         };
     }
-
 };
-
-

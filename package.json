@@ -13,9 +13,7 @@
         "async":"*",
         "xml2js":"*",
         "connect-redis": "*",
-        "log4js":"0.5.7"
-    },
-    "devDependencies": {
+        "log4js":"0.5.7",
         "bai": "*"
     }
 }

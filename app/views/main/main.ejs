@@ -10,20 +10,14 @@
     <!--[if lte IE 9]><script src="/lib/js/html5shiv.min.js"></script><![endif]-->
     </head>
   <body>
+    <% include ../global_blocks/header %>
     <div class="warpper">
-
-
       <!-- module loader -->
-      <% include ../global_blocks/header %>
-      <% include blocks/todayFocus %>
-
-      <img src="/static/img/baidu.jpg" alt="" />
-
-       <% include ../global_blocks/footer %>
-      <!-- for requireJS 极致优化 -->
-      <script src="/lib/js/require.js" data-main="/lib/js/main.min"></script>
-      <!-- dev js:assets -->
-      <script src="/static/js/main.js"></script>
+      <% include ../global_blocks/footer %>
     </div>
+    <!-- for requireJS 极致优化 -->
+    <script src="/lib/js/require.js" data-main="/lib/js/main.min"></script>
+    <!-- dev js:assets -->
+    <script src="/static/js/main.js"></script>
   </body>
 </html>
