@@ -426,25 +426,34 @@ a {
 }
 footer {
   width: 100%;
-  background-color: #34224c;
-  border-top: 1px solid #4c326f;
+  position: fixed;
+  bottom: 0;
+  background-color: #3e4153;
+  border-top: 1px solid #535871;
   color: #ece4f7;
 }
 footer .fixed {
   width: 960px;
-  height: 100px;
   margin: 0 auto;
   text-align: center;
-  margin-top: 40px;
+  font-style: 14px;
+  font-weight: bold;
 }
 /* font-family */
 body {
   font: 12px/175% Arial, 'Microsoft YaHei', Tahoma;
-  background: #1c1229;
+  background: #282a36;
+}
+body a {
+  color: #eee;
+}
+body a:hover {
+  text-decoration: underline;
 }
 body .warpper {
   width: 960px;
-  padding: 25px 25px;
-  margin: 30px auto;
-  background: #ece4f7;
+  padding: 15px;
+  margin: 10px auto 0;
+  background: #eee;
+  overflow: hidden;
 }
