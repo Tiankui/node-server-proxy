@@ -1,5 +1,5 @@
 module.exports = {
-    MODE: 'dev',
+    MODE: 'pro',
     LISTEN_PORT: 3000,
     SESSION_SECRET_KEY: 'secret',
     SERVER: {
