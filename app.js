@@ -21,6 +21,7 @@ app.configure(function(){
   app.set('view engine', 'ejs');
   app.use(log4js.connectLogger(logger, { level: log4js.levels.INFO }));
   app.use(express.favicon());
+  app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
