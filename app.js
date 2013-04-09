@@ -42,6 +42,7 @@ app.set('env',process.argv[2]?process.argv[2]:sysConfig.MODE);
 
 //routes
 app.get('/',routes.index);
+app.get('/movie',routes.movie);
 
 if (app.get('env') === 'pro') {
   console.log('production mode');
