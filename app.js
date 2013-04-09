@@ -20,7 +20,7 @@ app.configure(function(){
   app.set('views', __dirname + '/app/views');
   app.set('view engine', 'ejs');
   app.use(log4js.connectLogger(logger, { level: log4js.levels.INFO }));
-  app.use(express.favicon());
+  
   app.use(express.compress());
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -33,7 +33,9 @@ app.configure(function(){
   app.use(app.router);
   app.use('/lib', express['static'](__dirname + '/app/lib'));
   app.use('/static', express['static'](__dirname + '/app/dist'));
+  
   app.use('/static/img', express['static'](__dirname + '/app/img'));
+  app.use(express.favicon(__dirname + '/app/img/favicon.png'));
 });
 
 app.set('env',process.argv[2]?process.argv[2]:sysConfig.MODE);
